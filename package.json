@@ -2,7 +2,7 @@
   "name": "pd-pdf-viewer",
   "version": "1.0.0",
   "description": "A Vue Component PDF Viewer Use pdf.js Default Viewer",
-  "main": "PDFViewer.vue",
+  "main": "dist/PDFViewer.vue",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
