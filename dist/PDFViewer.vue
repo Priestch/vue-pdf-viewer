@@ -385,7 +385,7 @@
         type: String
       }
     },
-    created () {
+    mounted () {
       if (document.readyState === 'interactive' ||
         document.readyState === 'complete') {
         viewer.pdfViewer.loadPDF(this.docUrl)
