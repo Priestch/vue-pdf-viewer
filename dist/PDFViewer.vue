@@ -373,6 +373,7 @@
   import './pdf.js/web/viewer.css'
 
   let pdfjsLib = require('./pdf.js/build/pdf')
+  pdfjsLib.PDFJS.workerSrc = 'static/pdf.js/build/pdf.worker.js'
   window['pdfjs-dist/build/pdf'] = pdfjsLib
   let viewer = require('./pdf.js/web/viewer.js')
 
