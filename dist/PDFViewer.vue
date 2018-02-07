@@ -370,11 +370,11 @@
 
 <script>
   // require locale
-  import './web/viewer.css'
+  import './pdf.js/web/viewer.css'
 
-  let pdfjsLib = require('./build/pdf')
+  let pdfjsLib = require('./pdf.js/build/pdf')
   window['pdfjs-dist/build/pdf'] = pdfjsLib
-  let viewer = require('./web/viewer.js')
+  let viewer = require('./pdf.js/web/viewer.js')
 
   export default {
     name: 'pdf-viewer',
