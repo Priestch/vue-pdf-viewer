@@ -382,7 +382,7 @@
     props: {
       docUrl: {
         required: true,
-        type: String
+        type: [String, Uint8Array]
       }
     },
     mounted () {
