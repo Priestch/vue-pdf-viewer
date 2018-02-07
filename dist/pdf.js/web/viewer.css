@@ -344,19 +344,15 @@
   margin: 0;
 }
 
-html {
-  height: 100%;
-  width: 100%;
-  /* Font size is needed to make the activity bar the correct size. */
-  font-size: 10px;
-}
+/*html {*/
+  /*height: 100%;*/
+  /*width: 100%;*/
+/*}*/
 
-body {
-  height: 100%;
-  width: 100%;
-  background-color: #404040;
-  background-image: url(images/texture.png);
-}
+/*body {*/
+  /*height: 100%;*/
+  /*width: 100%;*/
+/*}*/
 
 body,
 input,
@@ -375,6 +371,11 @@ select {
 
 #pdfAppContainer {
   height: 100%;
+  background-color: #404040;
+  background-image: url(images/texture.png);
+
+  /* Font size is needed to make the activity bar the correct size. */
+  font-size: 10px;
 }
 
 #viewerContainer.pdfPresentationMode:-webkit-full-screen {

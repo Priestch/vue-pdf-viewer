@@ -1,6 +1,6 @@
 {
   "name": "vue-pdf-viewer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Vue Component PDF Viewer Use pdf.js Default Viewer",
   "main": "dist/PDFViewer.vue",
   "scripts": {
