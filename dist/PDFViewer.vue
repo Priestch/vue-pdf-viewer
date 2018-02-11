@@ -428,7 +428,7 @@
   }
 </script>
 
-<style scoped>
+<style>
   .table-warp {
     width: 100%;
     height: 100%;
@@ -684,9 +684,9 @@
     color: #fff
   }
 
-  .table_border {
+  .dashed-table {
     position: absolute;
-    /*border: 1px dashed #333333;*/
+    border: 1px dashed blue;
     z-index: 1000;
   }
 </style>
