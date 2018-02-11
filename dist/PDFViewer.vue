@@ -369,7 +369,6 @@
 </template>
 
 <script>
-  // require locale
   import './pdf.js/web/viewer.css'
 
   let pdfjsLib = require('./pdf.js/build/pdf')
@@ -383,6 +382,16 @@
       docUrl: {
         required: true,
         type: [String, Uint8Array]
+      },
+      pluginNames: {
+        required: false,
+        type: Array,
+        default: () => ([])
+      }
+    },
+    data() {
+      return {
+        plugins: []
       }
     },
     mounted () {
@@ -393,6 +402,27 @@
         document.addEventListener('DOMContentLoaded', () => {
           viewer.pdfViewer.loadPDF(this.docUrl)
         }, true)
+      }
+      this.registerPlugins()
+    },
+    beforeDestroy() {
+      this.deregisterPlugins()
+    },
+    methods: {
+      registerPlugins() {
+        this.pluginNames.forEach((name) => {
+          import(`./plugins/${name}`).then(({default: PluginClass}) => {
+            let plugin = new PluginClass()
+            plugin.register()
+            this.plugins.push(plugin)
+          })
+        })
+      },
+      deregisterPlugins() {
+        this.plugins.forEach((plugin) => {
+          plugin.deregister()
+        })
+        this.plugins = []
       }
     }
   }
