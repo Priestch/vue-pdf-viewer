@@ -429,5 +429,264 @@
 </script>
 
 <style scoped>
+  .table-warp {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 1px solid #0000ff;
+    /*position: relative;*/
+    padding: 0;
+    outline: none;
+    overflow: hidden;
+  }
 
+  .tbody-warp {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+  }
+
+  .trow-warp {
+    width: 100%;
+    /*height: 20px;*/
+    padding: 0;
+    margin: 0;
+    margin-top: 1px;
+  }
+
+  .tcol-warp {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+  }
+
+  .fill-warp {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    margin: 0 auto;
+  }
+
+  .fill_warp_right {
+    width: 9px;
+    height: 100%;
+    position: absolute;
+    right: -5px;
+    cursor: e-resize;
+    /*background: #70DB55;*/
+  }
+
+  .fill_warp_bottom {
+    width: 100%;
+    height: 9px;
+    position: absolute;
+    bottom: -5px;
+    cursor: n-resize;
+    /*background: #70DB55;*/
+  }
+
+  .fill-warp-select {
+    width: 98%;
+    height: 98%;
+    padding: 0;
+    border: 0;
+    margin: 0 auto;
+    background-color: #eee;
+    opacity: 0.5;
+  }
+
+  .right-border {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    cursor: e-resize;
+  }
+
+  .bottom-border {
+    width: 100%;
+    height: 1px;
+    /*background-color: #0000ff;*/
+    position: absolute;
+    bottom: 0;
+    cursor: n-resize;
+  }
+
+  .height-line {
+    width: 1px;
+    height: 100%;
+    background: #ff0000;
+    position: absolute;
+    top: 0;
+    cursor: e-resize;
+  }
+
+  .bottom-line {
+    width: 100%;
+    height: 1px;
+    background: #ff0000;
+    position: absolute;
+    top: 0;
+    cursor: n-resize;
+  }
+
+  .skin-warp {
+    width: 250px;
+    padding: 2px;
+    z-index: 1000;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    border: 1px solid #999;
+    padding-top: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.15);
+    position: relative;
+    padding-bottom: 10px;
+  }
+
+  .item_style {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    color: #333;
+    position: relative;
+  }
+
+  .item_style:hover {
+    background-color: #375da2;
+    color: #ffffff;
+  }
+
+  .item_tip {
+    position: absolute;
+    right: 18px;
+    top: 0;
+    line-height: 30px;
+    height: 30px;
+    font-size: 12px;
+    color: #999;
+  }
+
+  .item_style:hover .item_tip {
+    color: #fff;
+  }
+
+  .item_style {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    color: #333;
+  }
+
+  .item_style:hover {
+    background-color: #375da2;
+    color: #ffffff;
+  }
+
+  .menuitems {
+    margin: 1px 0;
+  }
+
+  .menuitems:hover {
+    background-color: #c1dad7;
+  }
+
+  .draw-table-warp {
+    width: 100%;
+    height: 100%;
+  }
+
+  .draw_input {
+    margin-left: 15px;
+    margin-top: 15px;
+    background-color: turquoise;
+    width: 80px;
+    height: 20px;
+    text-align: center;
+    z-index: 100000;
+    line-height: 20px;
+  }
+
+  .draw-warp {
+    width: 100%;
+  }
+
+  .tip-warp {
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    background: #fff;
+    color: red;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    line-height: 100px;
+    z-index: 1000;
+    /*word-break: break-all;*/
+    /*word-wrap:break-word;*/
+  }
+
+  #drag {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.1;
+    left: 0;
+    top: 0;
+    cursor: move;
+    z-index: 1000;
+  }
+
+  /*.td_operation {*/
+  /*position: absolute;*/
+  /*top: 3px;*/
+  /*right: -26px;*/
+  /*background: gray;*/
+  /*color: #fff;*/
+  /*height: 22px;*/
+  /*width: 75px;*/
+  /*text-align: center;*/
+  /*line-height: 19px;*/
+  /*background-color: #ec5123;*/
+  /*-moz-transform: rotate(45deg);*/
+  /*-webkit-transform: rotate(45deg);*/
+  /*-o-transform: rotate(45deg);*/
+  /*-ms-transform: rotate(45deg);*/
+  /*transform: rotate(45deg);*/
+  /*font-size: 16px;*/
+  /*}*/
+
+  .td_operation {
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #ec5123;
+    position: absolute;
+    z-index: 10000;
+    left: 2px;
+    top: 50%;
+    margin-top: -8px;
+    color: #fff
+  }
+
+  .table_border {
+    position: absolute;
+    /*border: 1px dashed #333333;*/
+    z-index: 1000;
+  }
 </style>
