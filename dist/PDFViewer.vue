@@ -689,4 +689,9 @@
     border: 1px dashed blue;
     z-index: 1000;
   }
+
+  .table_border {
+    z-index: 1000;
+    position: absolute;
+  }
 </style>
